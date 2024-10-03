@@ -1,8 +1,8 @@
 import gymnasium as gym
-env = gym.make("ALE/Blackjack-v5", render_mode="human")
+env = gym.make("ALE/Assault-v5", render_mode="human")
 observation, info = env.reset(seed=42)
 for _ in range(1000):
-   action = env.action_space.sample()  # this is where you would insert your policy
+   action = env.action_space.sample()
    observation, reward, terminated, truncated, info = env.step(action)
 
    if terminated or truncated:
